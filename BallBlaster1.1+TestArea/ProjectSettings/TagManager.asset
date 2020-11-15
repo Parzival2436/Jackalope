@@ -11,6 +11,7 @@ TagManager:
   - Home
   - Lava
   - Floor
+  - Enemy
   layers:
   - Default
   - TransparentFX
