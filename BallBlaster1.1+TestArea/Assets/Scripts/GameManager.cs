@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject levelTwoText;
 
     //Hud Variables
-    private float life;
+    public float playerLife;
     private int lifeDisplay;
     private int count;
     private int pickup;
@@ -34,7 +34,9 @@ public class GameManager : MonoBehaviour
     private float turnVelocity = 3;
     public Transform cam;
     public float speed = 20f;
-    public float force = 100000f;
+    public float force = 10f;
+    public float recoilRecovery = 1;
+    public float damageRecoil = -10;
     public float gravity = -20f;
     public Transform groundCheck;
     private float groundDistance = 0.5f;
@@ -58,11 +60,15 @@ public class GameManager : MonoBehaviour
     private int sDashCheck = 0;
     int DashLimit = 1;
 
+    //Damage
+    int enemyDamage = 20;
+    int healthPack = 25;
+
     //Initialize
     void Start()
     {
         Cursor.visible = false;
-        life = 100;
+        playerLife = 100;
         count = 0;
         SetLifeText();
         SetCountText();
@@ -125,6 +131,15 @@ public class GameManager : MonoBehaviour
 
             }
        
+        //Set Life Range
+        if (playerLife > 100)
+        {
+            playerLife = 100;
+        }
+        if (playerLife < 0)
+        {
+            playerLife = 0;
+        }
 
         //groundcheck
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -152,7 +167,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Convert Life Float to Int & Display
-        lifeDisplay = (int) life;
+        lifeDisplay = (int) playerLife;
         SetLifeText();
 
         //Remove Tutorial Text
@@ -227,10 +242,10 @@ public class GameManager : MonoBehaviour
         lifeText.text = "Life: " + lifeDisplay.ToString();
 
         //Respawn
-        if(life <= 0)
+        if(playerLife <= 0)
         {   
             gameObject.transform.position = new Vector3(0.0f, 2.0f, 0.0f);
-            life = 100;
+            playerLife = 100;
             lifeText.text = "Life: " + lifeDisplay.ToString();
         }
     }
@@ -273,6 +288,7 @@ public class GameManager : MonoBehaviour
         {
            transform.position = new Vector3(0.0f, 1.6f, 0.0f);
         }
+
         if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
@@ -280,11 +296,24 @@ public class GameManager : MonoBehaviour
             SetCountText();
         }
 
-
-        if (other.gameObject.CompareTag("Spike"))
+        if (other.gameObject.CompareTag("Hp"))
         {
-            life = life - 20 ;
+            if (playerLife < 100)
+            {
+                other.gameObject.SetActive(false);
+                playerLife = (playerLife + healthPack);
+                SetLifeText();
+            }
+
+        }
+
+        if (other.gameObject.name == "HurtyBit")
+        {   
+            playerLife = playerLife - enemyDamage;
             SetLifeText();
+            //Vector3 dir = transform.position - other.transform.position;
+            //dir.Normalize();
+            //controller.Move(dir * force);
         }
 
         if (other.gameObject.CompareTag("Home"))
@@ -295,13 +324,13 @@ public class GameManager : MonoBehaviour
         if (other.gameObject.CompareTag("Killbox"))
         {
             gameObject.transform.position = new Vector3(0.0f, 2.0f, 0.0f);
-            life = 100;
+            playerLife = 100;
             lifeText.text = "Life: " + lifeDisplay.ToString();
         }
 
         if (other.gameObject.CompareTag("Lava"))
         {
-            life = life - 10;
+            playerLife = playerLife - 10;
             SetLifeText();
         }
 
@@ -311,7 +340,7 @@ public class GameManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Lava"))
         { 
-            life = life - 20 * Time.deltaTime;
+            playerLife = playerLife - 20 * Time.deltaTime;
             SetLifeText();
             controller.Move(Vector3.up * force * Time.deltaTime);
         }
@@ -320,7 +349,7 @@ public class GameManager : MonoBehaviour
         {
             Vector3 dir = transform.position - other.transform.position;
             dir.Normalize();
-            controller.Move(dir * 10 * force);
+            controller.Move(dir * force);
         }
     }
 

@@ -12,6 +12,7 @@ TagManager:
   - Lava
   - Floor
   - Enemy
+  - Hp
   layers:
   - Default
   - TransparentFX
