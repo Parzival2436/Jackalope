@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 676
     width: 1572
     height: 271
-  m_MinSize: {x: 235, y: 100}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 236, y: 121}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 69
+  controlID: 115
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,10 +96,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 321}
-  m_MaxSize: {x: 12002, y: 8042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 67
+  controlID: 113
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 348
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -146,8 +146,8 @@ MonoBehaviour:
     y: 0
     width: 365
     height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -172,8 +172,8 @@ MonoBehaviour:
     y: 0
     width: 1118
     height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 17}
@@ -203,7 +203,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -276,10 +276,10 @@ MonoBehaviour:
     y: 0
     width: 1572
     height: 947
-  m_MinSize: {x: 402, y: 321}
-  m_MaxSize: {x: 8002, y: 8042}
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 68
+  controlID: 114
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,10 +301,10 @@ MonoBehaviour:
     y: 0
     width: 1572
     height: 676
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 28
+  controlID: 75
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -448,21 +448,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\shark\Desktop\Git\Jackalope\BallBlaster1.1+TestArea
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 564e0000
-    m_LastClickedID: 20054
-    m_ExpandedIDs: 00000000204e0000
+    m_SelectedIDs: 2c4e0000
+    m_LastClickedID: 20012
+    m_ExpandedIDs: 00000000964d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,7 +490,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000204e0000
+    m_ExpandedIDs: 00000000964d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -515,8 +515,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ac480000
-    m_LastClickedInstanceID: 18604
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -614,7 +614,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1efbffff
+      m_ExpandedIDs: 80f4ffffa0f4ffff90f6ffffc8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -674,9 +674,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.5782546, y: 4.7011094, z: 24.986431}
+    m_Target: {x: 0.2820301, y: 18.981575, z: 13.387245}
     speed: 2
-    m_Value: {x: 1.5782546, y: 4.7011094, z: 24.986431}
+    m_Value: {x: 0.2820301, y: 18.981575, z: 13.387245}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -723,13 +723,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2848575, y: -0.42330968, z: 0.1421625, w: 0.8482087}
+    m_Target: {x: 0.18091917, y: 0.07074391, z: -0.013048719, w: 0.98086625}
     speed: 2
-    m_Value: {x: 0.28485706, y: -0.42330903, z: 0.14216228, w: 0.8482074}
+    m_Value: {x: -0.18091916, y: -0.07074391, z: 0.013048718, w: -0.9808662}
   m_Size:
-    m_Target: 5.9458833
+    m_Target: 14.753542
     speed: 2
-    m_Value: 5.9458833
+    m_Value: 14.753542
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -802,8 +802,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -602.5
     m_HBaseRangeMax: 602.5
-    m_VBaseRangeMin: -317
-    m_VBaseRangeMax: 317
+    m_VBaseRangeMin: -327.5
+    m_VBaseRangeMax: 327.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -820,11 +820,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1205
-      height: 634
+      height: 655
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 602.5, y: 317}
+    m_Translation: {x: 602.5, y: 327.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -832,9 +832,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -602.5
-      y: -317
+      y: -327.5
       width: 1205
-      height: 634
+      height: 655
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1205, y: 655}

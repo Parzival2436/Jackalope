@@ -255,11 +255,11 @@ public class GameManager : MonoBehaviour
         countText.text = "Count: " + count.ToString();
 
         //Count Triggered Events
-        if (count >= 3)
+        if (count >= 4)
         {
             doorOne.SetActive(false);
         }
-        if (count >= 7)
+        if (count >= 8)
         {
             doorOneB.SetActive(false);
         }
@@ -275,7 +275,7 @@ public class GameManager : MonoBehaviour
         //{
         //    doorTwo.SetActive(false);
         //}
-        if (count >= 13)
+        if (count >= 15)
         {
             winTextObject.SetActive(true);
         }
