@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     //Player Triggered GameObjects
     public GameObject doorOne; //North
     public GameObject doorOneB;
-    public GameObject doorTwo; //East
+    public GameObject levelOnePortal;
+    public GameObject level0;
 
     //Text
     public TextMeshProUGUI lifeText;
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     private int lifeDisplay;
     private int count;
     private int pickup;
+    public int winCount;
+    public int levelGoal;
 
     //Movement
     public CharacterController controller;
@@ -74,7 +77,7 @@ public class GameManager : MonoBehaviour
         SetCountText();
         doorOne.SetActive(true);
         winTextObject.SetActive(false);
-        controlText.SetActive(true);
+
 
     }
 
@@ -263,19 +266,20 @@ public class GameManager : MonoBehaviour
         {
             doorOneB.SetActive(false);
         }
-        //if (count == 10)
-        //{
-        //    levelTwoText.SetActive(true);
-        //}
-        //else
-        //{
-        //    levelTwoText.SetActive(false);
-        //}
+        if (count == levelGoal)
+        {
+            levelTwoText.SetActive(true);
+            levelOnePortal.SetActive(true);
+        }
+        else
+        {
+            levelTwoText.SetActive(false);
+        }
         //if (count >= 10)
         //{
         //    doorTwo.SetActive(false);
         //}
-        if (count >= 15)
+        if (count >= winCount)
         {
             winTextObject.SetActive(true);
         }
@@ -287,6 +291,12 @@ public class GameManager : MonoBehaviour
         if (other.gameObject.CompareTag("Killbox"))
         {
            transform.position = new Vector3(0.0f, 1.6f, 0.0f);
+        }
+
+        if (other.gameObject.CompareTag("PortalOne"))
+        {
+            Application.LoadLevelAdditive(1);
+            level0.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("PickUp"))

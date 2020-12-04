@@ -13,6 +13,7 @@ TagManager:
   - Floor
   - Enemy
   - Hp
+  - PortalOne
   layers:
   - Default
   - TransparentFX

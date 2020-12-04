@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JackalopeV2.0.unity
     guid: ca94c686200295340907b4053978aede
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 822ea95b69a91a04395fef29cbe568ab
   m_configObjects: {}
